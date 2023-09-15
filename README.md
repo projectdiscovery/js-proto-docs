@@ -33,8 +33,7 @@ $ gh repo clone projectdiscovery/nuclei
 ### Generate docs
 
 ```console
-cd v2/pkg/js
-jsdoc -R nuclei/docs/template-guide/javascript.mdx -r -d docs/ -t $(npm root -g)/clean-jsdoc-theme nuclei/v2/pkg/js/generated/js
+$ jsdoc -R nuclei/docs/template-guide/javascript.mdx -r -d docs/ -t $(npm root -g)/clean-jsdoc-theme nuclei/v2/pkg/js/generated/js
 ```
 
 > If above command fails, try updating paths 
@@ -42,6 +41,12 @@ jsdoc -R nuclei/docs/template-guide/javascript.mdx -r -d docs/ -t $(npm root -g)
 > 
 >  jsdoc -R [Homepage.md] -r -d api_reference -t [optional: jsdoc theme to use] generated/js
 
+
+### Verify generated docs
+
+```console
+$ cd docs && simplehttpserver
+```
 
 
 ### Contributing
